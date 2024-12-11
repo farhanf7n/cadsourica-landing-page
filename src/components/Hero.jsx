@@ -25,7 +25,7 @@ function Hero() {
   return (
     <section>
       <div className="relative pt-12 sm:py-[280px]">
-        <div className="absolute right-20 bottom-44 hidden lg:block">
+        <div className="absolute right-0 bottom-44 hidden lg:block">
           <img className="object-right " src="/hero-building.png" alt="" />
         </div>
 

@@ -5,6 +5,7 @@ import GridPattern from "./components/Grid-pattern";
 import Expertise from "./components/Expertise";
 import ThreeCards from "./components/ThreeCards";
 import SliderSection from "./components/SliderSection";
+import Contact from "./components/Contact";
 function App() {
   return (
     <>
@@ -15,6 +16,7 @@ function App() {
       <Expertise />
       <ThreeCards />
       <SliderSection />
+      <Contact />
     </>
   );
 }

@@ -51,7 +51,7 @@ function GridPattern() {
           />
 
           <div className="relative z-10 max-w-2xl mx-auto text-center">
-            <div className="flex justify-center items-center gap-4">
+            <div className="flex flex-wrap justify-center items-center gap-4">
               <svg
                 width="46"
                 height="44"
@@ -64,22 +64,24 @@ function GridPattern() {
                   fill="#38BDF8"
                 />
               </svg>
-              <p className="text-[43px] leading-10 font-semibold text-white">
+              <p className="text-2xl sm:text-3xl md:text-[43px] leading-tight font-semibold text-white">
                 Cadsourcia en quelques chiffres
               </p>
             </div>
           </div>
 
-          <div className="relative grid grid-cols-1 mt-10 text-center lg:mt-14 md:grid-cols-3 max-w-6xl mx-auto">
+          <div className="relative grid grid-cols-1 gap-8 mt-10 text-center lg:mt-14 md:grid-cols-3 max-w-6xl mx-auto">
             <div className="flex flex-col justify-center items-center">
-              <h3 className="relative font-bold text-7xl unset flex flex-col items-start">
-                <span className="relative text-2xl leading-6 font-semibold text-white">
+              <h3 className="relative font-bold unset flex flex-col items-start">
+                <span className="relative text-xl sm:text-2xl leading-6 font-semibold text-white">
                   Clients fidèles
                 </span>
                 <div className="relative pt-6">
-                  <span className="text-white text-9xl relative">
+                  <span className="text-white text-6xl sm:text-7xl md:text-8xl lg:text-9xl relative">
                     <AnimatedNumber value={120} />
-                    <span className="absolute top-0 -right-5 text-5xl">+</span>
+                    <span className="absolute top-0 -right-4 sm:-right-5 text-3xl sm:text-4xl lg:text-5xl">
+                      +
+                    </span>
                   </span>
                 </div>
               </h3>
@@ -91,9 +93,11 @@ function GridPattern() {
                   Consultants
                 </span>
                 <div className="relative pt-6">
-                  <span className="text-white text-9xl relative">
+                  <span className="text-white text-6xl sm:text-7xl md:text-8xl lg:text-9xl relative">
                     <AnimatedNumber value={200} />
-                    <span className="absolute top-0 -right-5 text-5xl">+</span>
+                    <span className="absolute top-0 -right-5 text-3xl sm:text-4xl lg:text-5xl">
+                      +
+                    </span>
                   </span>
                 </div>
               </h3>
@@ -105,9 +109,9 @@ function GridPattern() {
                   Satisfaction
                 </span>
                 <div className="relative pt-6">
-                  <span className="text-white text-9xl relative">
+                  <span className="text-white text-6xl sm:text-7xl md:text-8xl lg:text-9xl relative">
                     <AnimatedNumber value={95} />
-                    <span className="absolute top-0 -right-8 text-4xl">
+                    <span className="absolute top-0 -right-8 text-3xl sm:text-4xl lg:text-5xl">
                       %
                     </span>{" "}
                   </span>
