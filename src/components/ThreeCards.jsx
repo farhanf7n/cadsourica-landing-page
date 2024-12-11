@@ -1,7 +1,7 @@
 function ThreeCards() {
   return (
-    <section className="relative py-24 px-4 mx-auto sm:px-6 lg:px-0 max-w-[90%]">
-      <div>
+    <section className="relative py-24 px-4 sm:px-6 lg:px-0">
+      <div className="container xl:max-w-screen-2xl mx-auto">
         <div className="flex items-center justify-center gap-4">
           <svg
             width="63"

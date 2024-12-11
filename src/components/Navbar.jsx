@@ -28,8 +28,8 @@ function Navbar() {
 
   return (
     <>
-      <div className="bg-white fixed top-0 left-0 right-0 z-[999]">
-        <div className="max-w-[90%] mx-auto">
+      <section className="bg-white fixed top-0 left-0 right-0 z-[999]">
+        <div className="container xl:max-w-screen-2xl relative px-4 mx-auto">
           <div className="flex justify-between px items-center py-6 md:justify-start px-5 lg:px-0">
             <div className="flex justify-start lg:w-0 lg:flex-1">
               <Link to="/">
@@ -227,7 +227,7 @@ function Navbar() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

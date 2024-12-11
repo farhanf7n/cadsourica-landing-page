@@ -23,13 +23,13 @@ function Hero() {
     },
   };
   return (
-    <section>
-      <div className="relative pt-12 sm:py-[280px]">
+    <section className="relative">
+      <div className=" pt-12 sm:py-[280px] container xl:max-w-screen-2xl mx-auto">
         <div className="absolute right-0 bottom-44 hidden lg:block">
           <img className="object-right " src="/hero-building.png" alt="" />
         </div>
 
-        <div className="relative px-4 mx-auto sm:px-6 lg:px-0 max-w-[90%]">
+        <div className="relative px-4 mx-auto sm:px-6 lg:px-0">
           <div className="max-w-lg pt-20 sm:pt-0 md:pt-20 mx-auto text-left lg:mx-0 lg:max-w-3xl lg:text-left">
             <div className="flex items-center gap-4">
               <svg

@@ -21,7 +21,7 @@ function Expertise() {
   };
   return (
     <section className="bg-brand-blue py-32 relative expertise-pattern">
-      <div className="relative px-4 mx-auto sm:px-6 lg:px-0 max-w-[90%]">
+      <div className="container xl:max-w-screen-2xl relative px-4 mx-auto">
         <div>
           <div className="flex items-center gap-4">
             <svg

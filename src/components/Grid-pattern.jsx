@@ -41,8 +41,8 @@ function AnimatedNumber({ value, suffix }) {
 function GridPattern() {
   return (
     <section className="py-10 sm:py-16 lg:py-24">
-      <div className="relative">
-        <div className="bg-brand-blue max-w-[90%] py-20 px-4 mx-auto sm:px-6 lg:px-8 rounded-2xl relative">
+      <div className="container relative xl:max-w-screen-2xl mx-auto">
+        <div className="bg-brand-blue  py-20 px-4  sm:px-6 lg:px-8 rounded-2xl relative">
           <div
             className="absolute inset-0 rounded-2xl"
             style={{

@@ -6,6 +6,7 @@ import Expertise from "./components/Expertise";
 import ThreeCards from "./components/ThreeCards";
 import SliderSection from "./components/SliderSection";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 function App() {
   return (
     <>
@@ -17,6 +18,7 @@ function App() {
       <ThreeCards />
       <SliderSection />
       <Contact />
+      <Footer />
     </>
   );
 }

@@ -83,7 +83,7 @@ function SliderSection() {
 
   return (
     <section className="bg-[#E8F6FF] mb-24">
-      <div className="py-24 px-4 mx-auto sm:px-6 lg:px-0 max-w-[90%]">
+      <div className="container xl:max-w-screen-2xl py-24 px-4 mx-auto sm:px-6 lg:px-0 ">
         <div className="text-center mb-16">
           <span className="text-[#0976C2] py-1 px-3 border-l border-r border-[#0976C2]">
             Articles
@@ -97,12 +97,11 @@ function SliderSection() {
             éduquer et éveiller votre curiosité."
           </p>
         </div>
-
         <Swiper
           modules={[Navigation, Autoplay]}
           navigation={{
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: ".custom-swiper-button-next",
+            prevEl: ".custom-swiper-button-prev",
             hideOnClick: true,
           }}
           autoplay={{
@@ -180,14 +179,13 @@ function SliderSection() {
             </SwiperSlide>
           ))}
         </Swiper>
-
-        <div className="relative flex justify-center items-center gap-4">
-          <div className="custom-swiper-button-prev swiper-button-prev px-6 py-2">
+        <div className="relative flex justify-center items-center gap-2 pt-9">
+          <div className="custom-swiper-button-prev whitespace-nowrap text-base leading-6 font-normal bg-transparent text-brand-blue hover:bg-brand-blue/90 hover:text-white border border-brand-blue rounded-full font-lato transition-all duration-300 ease-in-out px-4 py-4 cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              width="16"
-              height="16"
+              width="25"
+              height="25"
               fill="none"
               style={{ transform: "rotate(180deg)" }}
             >
@@ -207,21 +205,12 @@ function SliderSection() {
               />
             </svg>
           </div>
-          <div
-            className="custom-swiper-button-next swiper-button-next px-6 py-2"
-            style={{
-              border: "1px solid #0976C2",
-              borderRadius: "100%",
-              width: "75px",
-              height: "75px",
-              padding: "unset",
-            }}
-          >
+          <div className="custom-swiper-button-next whitespace-nowrap text-base leading-6 font-normal bg-transparent text-brand-blue hover:bg-brand-blue/90 hover:text-white border border-brand-blue rounded-full font-lato transition-all duration-300 ease-in-out px-4 py-4 cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              width="16"
-              height="16"
+              width="25"
+              height="25"
               fill="none"
             >
               <path
