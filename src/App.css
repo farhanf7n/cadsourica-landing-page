@@ -9,3 +9,38 @@
   font-weight: normal;
   font-style: normal;
 }
+
+/* Add this to your global CSS file */
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  transition: all 0.3s ease;
+  z-index: 10;
+  display: none;
+}
+
+.swiper-button-prev {
+  left: 10px;
+}
+
+.swiper-button-next {
+  right: 10px;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background: #0976c2;
+}
+
+.swiper-button-prev:hover svg path,
+.swiper-button-next:hover svg path {
+  stroke: white;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+}
