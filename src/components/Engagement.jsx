@@ -30,7 +30,7 @@ function Engagement() {
             <div className="mt-8 lg:mt-0">
               <img
                 className="mx-auto object-contain absolute top-0 left-[-100px] w-[50%]"
-                src="/src/assets/images/pattern.png"
+                src="/pattern.png"
                 alt="Geometric wireframe pattern"
               />
             </div>
