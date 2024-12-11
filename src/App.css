@@ -9,3 +9,50 @@
   font-weight: normal;
   font-style: normal;
 }
+
+/* Reset default Swiper navigation styles */
+.swiper-button-prev,
+.swiper-button-next {
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+}
+
+/* Hide default Swiper navigation font icons */
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  display: none !important;
+}
+
+/* Apply custom styling */
+.swiper-button-prev,
+.swiper-button-next {
+  whitespace-nowrap !important;
+  text-base !important;
+  leading-6 !important;
+  font-normal !important;
+  background-color: white !important;
+  color: #0976C2 !important;
+  border: 1px solid #0976C2 !important;
+  border-radius: 9999px !important;
+  font-family: 'Lato', sans-serif !important;
+  transition: all 300ms ease-in-out !important;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: rgba(9, 118, 194, 0.9) !important;
+  color: white !important;
+}
+
+/* Maintain disabled state styling */
+.swiper-button-disabled {
+  opacity: 0.35 !important;
+  pointer-events: none !important;
+}
+
+.custom-swiper-button-next::after {
+  display: none !important;
+  content: far !important;
+}

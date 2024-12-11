@@ -1,6 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
-import { useAnimation, motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -82,28 +81,8 @@ function SliderSection() {
     },
   ];
 
-  const controls = useAnimation();
-
-  const pathVariants = {
-    normal: {
-      x: 0,
-      y: 0,
-      rotate: 0,
-    },
-    animate: {
-      x: [0, 3, 0],
-      y: [0, -3, 0],
-      transition: {
-        duration: 0.5,
-        repeat: Infinity,
-        repeatType: "reverse",
-        ease: "easeInOut",
-      },
-    },
-  };
-
   return (
-    <section className="bg-[#E8F6FF]">
+    <section className="bg-[#E8F6FF] mb-24">
       <div className="py-24 px-4 mx-auto sm:px-6 lg:px-0 max-w-[90%]">
         <div className="text-center mb-16">
           <span className="text-[#0976C2] py-1 px-3 border-l border-r border-[#0976C2]">
@@ -153,25 +132,19 @@ function SliderSection() {
                   <span className="text-[#0976C2] text-sm">
                     {article.category}
                   </span>
-                  <h3 className="text-xl font-semibold mt-2 group-hover:text-[#0976C2] transition-colors">
+                  <h3 className="text-xl font-semibold mt-2 flex justify-between items-center group-hover:text-[#0976C2] transition-colors">
                     {article.title}{" "}
                     <Link
                       to="suggestion"
-                      className="whitespace-nowrap text-base leading-6 font-normal bg-white text-brand-blue hover:bg-brand-blue/90 hover:text-white border border-brand-blue rounded-full font-lato transition-all duration-300 ease-in-out"
+                      className="whitespace-nowrap text-base leading-6 font-normal text-black font-lato"
                     >
-                      <div
-                        className="cursor-pointer select-none p-2 hover:bg-accent rounded-md transition-colors duration-200 flex items-center justify-center"
-                        onMouseEnter={() => controls.start("animate")}
-                        onMouseLeave={() => controls.start("normal")}
-                      >
-                        <motion.svg
+                      <div className="cursor-pointer select-none p-2 hover:bg-accent rounded-md transition-colors duration-200 flex items-center justify-center">
+                        <svg
                           width="24"
                           height="24"
                           viewBox="0 0 24 24"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
-                          variants={pathVariants}
-                          animate={controls}
                         >
                           <path
                             d="M6 18L18 6M18 6H9M18 6V15"
@@ -180,7 +153,7 @@ function SliderSection() {
                             strokeLinecap="round"
                             strokeLinejoin="round"
                           />
-                        </motion.svg>
+                        </svg>
                       </div>
                     </Link>
                   </h3>
@@ -207,6 +180,67 @@ function SliderSection() {
             </SwiperSlide>
           ))}
         </Swiper>
+
+        <div className="relative flex justify-center items-center gap-4">
+          <div className="custom-swiper-button-prev swiper-button-prev px-6 py-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="16"
+              height="16"
+              fill="none"
+              style={{ transform: "rotate(180deg)" }}
+            >
+              <path
+                d="M20.0001 11.9998L4.00012 11.9998"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M15.0003 17C15.0003 17 20.0002 13.3176 20.0002 12C20.0002 10.6824 15.0002 7 15.0002 7"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </div>
+          <div
+            className="custom-swiper-button-next swiper-button-next px-6 py-2"
+            style={{
+              border: "1px solid #0976C2",
+              borderRadius: "100%",
+              width: "75px",
+              height: "75px",
+              padding: "unset",
+            }}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="16"
+              height="16"
+              fill="none"
+            >
+              <path
+                d="M20.0001 11.9998L4.00012 11.9998"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M15.0003 17C15.0003 17 20.0002 13.3176 20.0002 12C20.0002 10.6824 15.0002 7 15.0002 7"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
       </div>
     </section>
   );

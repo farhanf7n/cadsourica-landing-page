@@ -26,9 +26,12 @@ function AnimatedNumber({ value, suffix }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
+          className="relative inline-block"
         >
           <motion.span>{rounded}</motion.span>
-          {suffix}
+          <span className="absolute top-0 -right-8 sm:-right-10 text-3xl sm:text-4xl lg:text-5xl">
+            {suffix}
+          </span>
         </motion.div>
       )}
     </motion.div>
@@ -76,12 +79,9 @@ function GridPattern() {
                 <span className="relative text-xl sm:text-2xl leading-6 font-semibold text-white">
                   Clients fidèles
                 </span>
-                <div className="relative pt-6">
+                <div className="pt-6">
                   <span className="text-white text-6xl sm:text-7xl md:text-8xl lg:text-9xl relative">
-                    <AnimatedNumber value={120} />
-                    <span className="absolute top-0 -right-4 sm:-right-5 text-3xl sm:text-4xl lg:text-5xl">
-                      +
-                    </span>
+                    <AnimatedNumber value={120} suffix="+" />
                   </span>
                 </div>
               </h3>
@@ -92,12 +92,9 @@ function GridPattern() {
                 <span className="relative text-2xl leading-6 font-semibold text-white">
                   Consultants
                 </span>
-                <div className="relative pt-6">
-                  <span className="text-white text-6xl sm:text-7xl md:text-8xl lg:text-9xl relative">
-                    <AnimatedNumber value={200} />
-                    <span className="absolute top-0 -right-5 text-3xl sm:text-4xl lg:text-5xl">
-                      +
-                    </span>
+                <div className="pt-6">
+                  <span className="text-white text-6xl sm:text-7xl md:text-8xl lg:text-9xl">
+                    <AnimatedNumber value={200} suffix="+" />
                   </span>
                 </div>
               </h3>
@@ -108,12 +105,9 @@ function GridPattern() {
                 <span className="relative text-2xl leading-6 font-semibold text-white">
                   Satisfaction
                 </span>
-                <div className="relative pt-6">
+                <div className="pt-6">
                   <span className="text-white text-6xl sm:text-7xl md:text-8xl lg:text-9xl relative">
-                    <AnimatedNumber value={95} />
-                    <span className="absolute top-0 -right-8 text-3xl sm:text-4xl lg:text-5xl">
-                      %
-                    </span>{" "}
+                    <AnimatedNumber value={95} suffix="%" />
                   </span>
                 </div>
               </h3>
