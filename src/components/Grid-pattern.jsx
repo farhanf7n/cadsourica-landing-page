@@ -1,22 +1,56 @@
-import gridPattern from "../assets/images/grid-pattern.png";
+import {
+  motion,
+  useInView,
+  animate,
+  useMotionValue,
+  useTransform,
+} from "framer-motion";
+import { useRef, useEffect } from "react";
+
+function AnimatedNumber({ value, suffix }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (latest) => Math.round(latest));
+
+  useEffect(() => {
+    if (isInView) {
+      animate(count, value, { duration: 2 });
+    }
+  }, [isInView, value, count]);
+
+  return (
+    <motion.div ref={ref}>
+      {isInView && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <motion.span>{rounded}</motion.span>
+          {suffix}
+        </motion.div>
+      )}
+    </motion.div>
+  );
+}
 
 function GridPattern() {
   return (
-    <section class="py-10 sm:py-16 lg:py-24">
+    <section className="py-10 sm:py-16 lg:py-24">
       <div className="relative">
-        <div
-          className="absolute inset-0 bg-repeat opacity-10"
-          style={{
-            backgroundImage: `url(${gridPattern})`,
-            // or alternatively:
-            // backgroundImage: "url('../assets/images/grid-pattern.png')",
-            backgroundSize: "30px 30px",
-            pointerEvents: "none", // Added to prevent interference with content
-          }}
-        ></div>
+        <div className="bg-brand-blue max-w-[90%] py-20 px-4 mx-auto sm:px-6 lg:px-8 rounded-2xl relative">
+          <div
+            className="absolute inset-0 rounded-2xl"
+            style={{
+              backgroundImage: 'url("/grid-pattern.png")',
+              backgroundRepeat: "repeat",
+              backgroundSize: "30px 30px",
+              pointerEvents: "none",
+            }}
+          />
 
-        <div className="max-w-[90%] py-20 px-4 mx-auto sm:px-6 lg:px-8 bg-brand-blue rounded-2xl relative">
-          <div class="max-w-2xl mx-auto text-center ">
+          <div className="relative z-10 max-w-2xl mx-auto text-center">
             <div className="flex justify-center items-center gap-4">
               <svg
                 width="46"
@@ -36,50 +70,43 @@ function GridPattern() {
             </div>
           </div>
 
-          <div class="relative grid grid-cols-1 mt-10 text-center lg:mt-14 md:grid-cols-3 max-w-6xl mx-auto">
+          <div className="relative grid grid-cols-1 mt-10 text-center lg:mt-14 md:grid-cols-3 max-w-6xl mx-auto">
             <div className="flex flex-col justify-center items-center">
-              <h3 class="relative font-bold text-7xl unset flex flex-col items-start">
+              <h3 className="relative font-bold text-7xl unset flex flex-col items-start">
                 <span className="relative text-2xl leading-6 font-semibold text-white">
                   Clients fidèles
                 </span>
                 <div className="relative pt-6">
-                  <span class="text-white text-9xl relative">
-                    {" "}
-                    120{" "}
-                    <span className="absolute top-0 -right-5 text-5xl">
-                      +
-                    </span>{" "}
+                  <span className="text-white text-9xl relative">
+                    <AnimatedNumber value={120} />
+                    <span className="absolute top-0 -right-5 text-5xl">+</span>
                   </span>
                 </div>
               </h3>
             </div>
 
             <div className="flex flex-col justify-center items-center">
-              <h3 class="relative font-bold text-7xl unset flex flex-col items-start">
+              <h3 className="relative font-bold text-7xl unset flex flex-col items-start">
                 <span className="relative text-2xl leading-6 font-semibold text-white">
                   Consultants
                 </span>
                 <div className="relative pt-6">
-                  <span class="text-white text-9xl relative">
-                    {" "}
-                    200{" "}
-                    <span className="absolute top-0 -right-5 text-5xl">
-                      +
-                    </span>{" "}
+                  <span className="text-white text-9xl relative">
+                    <AnimatedNumber value={200} />
+                    <span className="absolute top-0 -right-5 text-5xl">+</span>
                   </span>
                 </div>
               </h3>
             </div>
 
             <div className="flex flex-col justify-center items-center">
-              <h3 class="relative font-bold text-7xl unset flex flex-col items-start">
+              <h3 className="relative font-bold text-7xl unset flex flex-col items-start">
                 <span className="relative text-2xl leading-6 font-semibold text-white">
                   Satisfaction
                 </span>
                 <div className="relative pt-6">
-                  <span class="text-white text-9xl relative">
-                    {" "}
-                    95{" "}
+                  <span className="text-white text-9xl relative">
+                    <AnimatedNumber value={95} />
                     <span className="absolute top-0 -right-8 text-4xl">
                       %
                     </span>{" "}

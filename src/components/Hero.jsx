@@ -24,17 +24,13 @@ function Hero() {
   };
   return (
     <section>
-      <div class="relative pt-12 bg-gray-50 sm:py-[280px]">
-        <div class="absolute right-20 bottom-44 hidden lg:block">
-          <img
-            class="object-right "
-            src="/src/assets/images/hero-building.png"
-            alt=""
-          />
+      <div className="relative pt-12 sm:py-[280px]">
+        <div className="absolute right-20 bottom-44 hidden lg:block">
+          <img className="object-right " src="/hero-building.png" alt="" />
         </div>
 
-        <div class="relative px-4 mx-auto sm:px-6 lg:px-0 max-w-[90%]">
-          <div class="max-w-lg pt-20 sm:pt-0 md:pt-20 mx-auto text-left lg:mx-0 lg:max-w-3xl lg:text-left">
+        <div className="relative px-4 mx-auto sm:px-6 lg:px-0 max-w-[90%]">
+          <div className="max-w-lg pt-20 sm:pt-0 md:pt-20 mx-auto text-left lg:mx-0 lg:max-w-3xl lg:text-left">
             <div className="flex items-center gap-4">
               <svg
                 width="46"
@@ -50,7 +46,7 @@ function Hero() {
               </svg>
               <p className="text-3xl font-bold text-brand-blue">À propos</p>
             </div>
-            <h1 class="mt-2 text-6xl leading-[60px] font-bold text-black sm:mt-2 sm:text-5xl xl:text-6xl">
+            <h1 className="mt-2 text-6xl leading-[60px] font-bold text-black sm:mt-2 sm:text-5xl xl:text-6xl">
               Outsourced Modeling Solutions for Architecture and Real Estate
             </h1>
 
@@ -69,7 +65,7 @@ function Hero() {
               </p>
             </div>
 
-            <div class="mt-[30px] sm:mt-12 flex items-start gap-2">
+            <div className="mt-[30px] sm:mt-12 flex items-start gap-2">
               <NavLink
                 to="/suggestion"
                 className="whitespace-nowrap text-[16px] leading-[20px] font-bold bg-white text-brand-blue hover:bg-brand-blue/90 hover:text-white border border-brand-blue py-[10px] px-[20px] rounded-full font-lato transition-all duration-300 ease-in-out"
@@ -107,12 +103,8 @@ function Hero() {
             </div>
           </div>
 
-          <div class="mt-8 lg:hidden">
-            <img
-              class="w-full mx-auto"
-              src="/src/assets/images/hero-building.png"
-              alt=""
-            />
+          <div className="mt-8 lg:hidden">
+            <img className="w-full mx-auto" src="/hero-building.png" alt="" />
           </div>
         </div>
       </div>

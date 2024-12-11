@@ -24,19 +24,19 @@ function Engagement() {
   };
   return (
     <section>
-      <div class="relative pt-12 bg-gray-50 sm:py-[120px]">
-        <div class="relative px-4 mx-auto sm:px-6 lg:px-0 max-w-[90%] lg:flex lg:items-center lg:gap-12">
-          <div class="lg:w-1/2">
-            <div class="mt-8 lg:mt-0">
+      <div className="relative pt-1 sm:py-[120px]">
+        <div className="relative px-4 mx-auto sm:px-6 lg:px-0 max-w-[90%] lg:flex lg:items-center lg:gap-12">
+          <div className="lg:w-1/2">
+            <div className="mt-8 lg:mt-0">
               <img
-                class="mx-auto object-contain absolute top-0 left-[-110px] w-[80%]"
+                className="mx-auto object-contain absolute top-0 left-[-100px] w-[50%]"
                 src="/src/assets/images/pattern.png"
                 alt="Geometric wireframe pattern"
               />
             </div>
           </div>
-          <div class="lg:w-1/2 pt-20 sm:pt-0 md:pt-20 mx-auto text-left">
-            <h1 class="mt-2 text-6xl leading-[60px] font-bold text-black sm:mt-2 sm:text-5xl xl:text-6xl">
+          <div className="lg:w-1/2 pt-20 sm:pt-0 md:pt-20 mx-auto text-left">
+            <h1 className="mt-2 text-6xl leading-[60px] font-bold text-black sm:mt-2 sm:text-5xl xl:text-6xl">
               Notre engagement envers l'excellence
             </h1>
 
@@ -66,7 +66,7 @@ function Engagement() {
               </p>
             </div>
 
-            <div class="mt-[30px] sm:mt-12 flex items-start gap-2">
+            <div className="mt-[30px] sm:mt-12 flex items-start gap-2">
               <NavLink
                 to="/suggestion"
                 className="whitespace-nowrap text-[16px] leading-[20px] font-bold bg-white text-brand-blue hover:bg-brand-blue/90 hover:text-white border border-brand-blue py-[10px] px-[20px] rounded-full font-lato transition-all duration-300 ease-in-out z-[999]"

@@ -2,3 +2,17 @@
   max-width: 1480px;
   margin: 0 auto;
 }
+
+@font-face {
+  font-family: "Onest";
+  src: url("../assets/Onest/Onest-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.expertise-pattern {
+  background-image: url("/expertise-pattern.png");
+  background-repeat: repeat;
+  background-size: 30px 30px;
+  pointer-events: none;
+}
